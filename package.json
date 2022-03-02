@@ -1,0 +1,27 @@
+{
+  "name": "hafta2-odev-assignment-eyupucmaz",
+  "version": "1.0.0",
+  "description": "## 1-Malzeme Listesi: Tüm malzemelerden 5 er adet olduğu varsayılacaktır. Marul Turşu   Paket Sos   Soğan   Köfte   Tavuk   Domates   Ekmek   Patates   Cola",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node ./src/index.ts",
+    "dev": "nodemon ./src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/164-orion-innovation-turkey-bootcamp/hafta2-odev-assignment-eyupucmaz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/164-orion-innovation-turkey-bootcamp/hafta2-odev-assignment-eyupucmaz/issues"
+  },
+  "homepage": "https://github.com/164-orion-innovation-turkey-bootcamp/hafta2-odev-assignment-eyupucmaz#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.6.0",
+    "typescript": "^4.6.2"
+  }
+}
