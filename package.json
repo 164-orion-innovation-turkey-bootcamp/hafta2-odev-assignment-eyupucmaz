@@ -1,7 +1,7 @@
 {
   "name": "hafta2-odev-assignment-eyupucmaz",
   "version": "1.0.0",
-  "description": "## 1-Malzeme Listesi: Tüm malzemelerden 5 er adet olduğu varsayılacaktır. Marul Turşu   Paket Sos   Soğan   Köfte   Tavuk   Domates   Ekmek   Patates   Cola",
+  "description": "Hamburger Ordering System",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
