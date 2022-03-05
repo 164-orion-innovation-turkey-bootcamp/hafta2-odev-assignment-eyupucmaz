@@ -105,3 +105,35 @@ function checkMeatType(order, steps) {
 		}
 	});
 }
+
+
+// return a new promise also inside using checkMeatType function before cooking
+function checkCookingTime(order, steps) {
+	return new Promise(async (resolve, reject) => {
+		switch (order.cookingTime) {
+			case "rare":
+				await checkMeatType(order, steps);
+				setTimeout(() => {
+					resolve(console.log(steps[4].step, steps[4].title));
+				}, 2000);
+				break;
+			case "medium":
+				await checkMeatType(order, steps);
+				setTimeout(() => {
+					resolve(console.log(steps[5].step, steps[5].title));
+				}, 3000);
+				break;
+			case "well":
+				await checkMeatType(order, steps);
+				setTimeout(() => {
+					resolve(console.log(steps[6].step, steps[6].title));
+				}, 4000);
+				break;
+			default:
+				reject(new Error("There no type of cooking time like that!"));
+				break;
+		}
+	});
+}
+
+
