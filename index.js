@@ -157,3 +157,16 @@ function prepareHamburger(order, steps, fridge) {
 		}, 2000);
 	});
 }
+// steps 3.x.x, 4, 5 should start together in this function all of them starts
+// but it returns a promis to wait all of them before stating step 6
+async function prepareOrder(order, fridge, steps) {
+	return new Promise((resolve) => {
+		resolve(
+			prepareHamburger(order, steps, fridge),
+			doThing(5000, true, steps[9]),
+			doThing(2000, true, steps[10])
+		);
+	});
+}
+
+
