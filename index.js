@@ -89,4 +89,19 @@ function doThing(time, controller, resolveMessage, rejectMessage) {
 	});
 }
 
-
+// the function is checking for meat type takes two params an order and steps for logging
+function checkMeatType(order, steps) {
+	return new Promise(async (resolve, reject) => {
+		if (order.meatType === "Meatball") {
+			setTimeout(() => {
+				resolve(console.log(steps[3].step, steps[3].title));
+			}, 1000);
+		} else if (order.meatType === "Chicken") {
+			setTimeout(() => {
+				resolve(console.log(steps[7].step, steps[7].title));
+			}, 1000);
+		} else {
+			reject(new Error(`There is not kinda ${order.meatType}`));
+		}
+	});
+}
