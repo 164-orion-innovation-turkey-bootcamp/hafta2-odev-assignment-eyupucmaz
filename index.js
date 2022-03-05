@@ -67,3 +67,26 @@ function doThing(time, controller, resolveMessage, rejectMessage) {
 		}
 	});
 }
+
+/**
+ * @param  {} stock stock of shop is an object
+ * @param  {} steps an array of object for logging steps
+ */
+ function chekStock(stock, steps) {
+	return new Promise((resolve, reject) => {
+		// This step is using object methods -Object.values()- for return values of fridge object
+		// then cheking every value to is available for making a hamburger;
+		let stockStatus = Object.values(stock).every((item) => item > 0);
+		if (stockStatus === true) {
+			setTimeout(() => {
+				resolve(console.log(steps[1].step, steps[1].title));
+			}, 3000);
+		} else {
+			setTimeout(() => {
+				reject(new Error(steps[2].step, steps[2].title));
+			}, 3000);
+		}
+	});
+}
+
+
