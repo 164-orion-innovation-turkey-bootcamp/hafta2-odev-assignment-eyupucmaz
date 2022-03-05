@@ -135,5 +135,25 @@ function checkCookingTime(order, steps) {
 		}
 	});
 }
-
-
+// this functions reperesents all steps of step:3.x.x after cheking cooking time decrasing the stocks
+function prepareHamburger(order, steps, fridge) {
+	return new Promise(async (resolve) => {
+		await checkCookingTime(order, steps);
+		setTimeout(() => {
+			Object.entries(fridge).map((item) => {
+				if (order.meatType === "Meatball") {
+					fridge[item[0]]--;
+					if (item[0] === "chicken") {
+						fridge[item[0]]++;
+					}
+				} else {
+					fridge[item[0]]--;
+					if (item[0] === "meatball") {
+						fridge[item[0]]++;
+					}
+				}
+			});
+			resolve(console.log(steps[8].step, steps[8].title));
+		}, 2000);
+	});
+}
