@@ -168,5 +168,18 @@ async function prepareOrder(order, fridge, steps) {
 		);
 	});
 }
+// The main function of doing every step takes order, stocks and steps for logging
+async function hamburgerProgress(order, fridge, steps) {
+	try {
+		await doThing(1000, true, steps[0]); // Taking an order
+		await chekStock(fridge, steps); // Cheking the stock
+		await prepareOrder(order, fridge, steps); // step 3,4,5
+		await doThing(1000, true, steps[11]); // step 6
+		await doThing(1000, true, steps[12]); // step 7
+	} catch (error) {
+		console.log(error); // if there is an error like "out of stock" it will shown there
+	}
+}
 
+hamburgerProgress(customerOrder1, myFridge, steps);
 
